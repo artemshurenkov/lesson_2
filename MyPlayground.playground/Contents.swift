@@ -37,7 +37,8 @@ for selection in lang {
 
 //Task 4
 //var a = 1
-var a = 0
+//var a = 0
+var a = -3
 if a == 0 {
   print("Верно")
 } else {
