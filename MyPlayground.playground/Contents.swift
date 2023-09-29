@@ -210,3 +210,28 @@ switch month {
   default: print("Something went wrong")
   }
 }
+
+
+//Task 20
+let gayParty = "GachiMuchi"
+let mySymbol:Character = "a"
+let firstSymbol = gayParty[gayParty.startIndex]
+
+if firstSymbol == mySymbol{
+    print("da")
+} else {
+    print("net")
+}
+
+//Task 21
+let numbers2 = "12345"
+//let myNumber:Character = "1"
+//let myNumber:Character = "2"
+let myNumber:Character = "3"
+let firstSymbol2 = numbers2[numbers2.startIndex]
+
+if firstSymbol2 == myNumber{
+    print("da")
+} else {
+    print("net")
+}
