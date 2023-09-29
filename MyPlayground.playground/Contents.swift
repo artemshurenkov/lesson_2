@@ -171,3 +171,42 @@ if a > 2 && a < 11 && b >= 6 && b < 14 {
 } else {
   print("Неверно")
 }
+
+//Task 17
+var num = [1, 2, 3 ,4]
+var result = ""
+
+for n in num {
+  switch n {
+    case 1: result = "зима"
+    case 2: result = "весна"
+    case 3: result = "лето"
+    case 4: result = "осень"
+    default: print("Something went wrong")
+  }
+  print(n, result)
+}
+
+//Task 18
+let days = 1...31
+  for day in days {
+switch day {
+  case 1..<11: print("\(day) falls in the first month period")
+  case 11..<21: print("\(day) falls in the second month period")
+  case 21..<32: print("\(day) falls in the third month period")
+  default: print("Something went wrong")
+  }
+}
+
+//Task 19
+let months = 1...12
+  for month in months {
+switch month {
+  case 1..<3: print("\(month) falls in the winter period")
+  case 3..<6: print("\(month) falls in the spring period")
+  case 6..<9: print("\(month) falls in the summer period")
+  case 9..<12: print("\(month) falls in the autumn period")
+  case 12: print("\(month) falls in the winter period")
+  default: print("Something went wrong")
+  }
+}
