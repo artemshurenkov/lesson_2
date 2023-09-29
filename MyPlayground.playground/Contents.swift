@@ -34,3 +34,11 @@ for selection in lang {
   }
   print(selection, text)
 }
+
+//Task 4
+var a = 1
+if a == 0 {
+  print("Верно")
+} else {
+        print("Неверно")
+}
