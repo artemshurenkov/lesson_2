@@ -235,3 +235,12 @@ if firstSymbol2 == myNumber{
 } else {
     print("net")
 }
+//TASK 22
+//TODO: summ
+var symbols2 = "123"
+
+var i1 = symbols2[symbols2.startIndex]
+var i2 = symbols2.index(symbols2.startIndex, offsetBy: 1)
+symbols2[i2]
+var i3 = symbols2.index(symbols2.startIndex, offsetBy: 2)
+symbols2[i3]
