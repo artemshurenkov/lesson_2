@@ -272,4 +272,33 @@ if result1 == true{
 numbers1.prefix(3)//принимают аргументы следующее сначала(suffix - с конца)
 numbers1.suffix(3).map { $0 * -1 }//возвращает значения уже со знаком минус в коллекцию
 
+//Task 24
+let number = -188
+let regex = /-?\d/
+let values = String(number).matches(of: regex).compactMap { Int($0.output) }
+print(values) // [-1, 8, 8]
 
+let spellOutFormatter: NumberFormatter = {
+    let nf = NumberFormatter()
+    nf.numberStyle = .spellOut
+    nf.locale = Locale(identifier: "ru_RU")
+    return nf
+}()
+
+extension Numeric {
+    var spelledOut: String {
+        return spellOutFormatter.string(for: self) ?? String(describing: self)
+    }
+}
+
+var finalResult = values.map {$0.spelledOut}
+
+var string: String?
+    for element in finalResult {
+        if string == nil {
+            string = element
+        } else {
+        string = string! + ", " + element
+        }
+    }
+    print(string! + ". И это меньше 50. ")
