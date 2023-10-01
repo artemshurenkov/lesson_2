@@ -1,4 +1,6 @@
 //Task1
+
+import Foundation
 let numbers = 1...12
 for number in numbers {
   switch number {
@@ -236,11 +238,17 @@ if firstSymbol2 == myNumber{
     print("net")
 }
 //TASK 22
-//TODO: summ
+//TODO: Нужен более детальный разбор
 var symbols2 = "123"
 
-var i1 = symbols2[symbols2.startIndex]
+/*var i1 = symbols2[symbols2.startIndex]
 var i2 = symbols2.index(symbols2.startIndex, offsetBy: 1)
 symbols2[i2]
 var i3 = symbols2.index(symbols2.startIndex, offsetBy: 2)
-symbols2[i3]
+symbols2[i3]*/
+
+func sum(text: String) -> Int {
+    return text.reduce(0, { Int(String($1)) != nil ? Int(String($1))! + $0 : $0 })
+}// начальное значение - 0, если первое значение не равно nil, то выполняется следующее условнме: первый элемент складывается с начальным, после текущий результат становится новым значениеми складывается со следующим.
+
+sum(text: symbols2)//вызов ф-и
