@@ -248,7 +248,28 @@ var i3 = symbols2.index(symbols2.startIndex, offsetBy: 2)
 symbols2[i3]*/
 
 func sum(text: String) -> Int {
-    return text.reduce(0, { Int(String($1)) != nil ? Int(String($1))! + $0 : $0 })
+    return text.reduce(0, { Int(String($1)) != nil ? Int(String($1))! + $0 : $0 })//зачем здесь :$
 }// начальное значение - 0, если первое значение не равно nil, то выполняется следующее условнме: первый элемент складывается с начальным, после текущий результат становится новым значениеми складывается со следующим.
 
 sum(text: symbols2)//вызов ф-и
+
+//Task 23
+
+let str1: String = "123222"
+let numbers1 = str1.map { Int(String($0))! }// последовательное преобразование каждого элемента в строке возвращая коллекцию чисел
+(numbers1.prefix(3) + numbers1.suffix(3).map { $0 * -1 })
+
+
+let calculation = (numbers1.prefix(3) + numbers1.suffix(3).map { $0 * -1 }).reduce(0) { $0 + $1 }// в конце склдавывает все элементы коллекции: 1 + 2 + 3 + -2  + -2 + -2
+//
+let result1 = calculation == 0
+
+if result1 == true{
+    print ("da")
+} else {
+    print("net")
+}
+numbers1.prefix(3)//принимают аргументы следующее сначала(suffix - с конца)
+numbers1.suffix(3).map { $0 * -1 }//возвращает значения уже со знаком минус в коллекцию
+
+
